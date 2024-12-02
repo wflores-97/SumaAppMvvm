@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SumaAppMvvm.Views.SumaView"
+             xmlns:viewModel="clr-namespace:SumaAppMvvm.ViewModel"
+             x:DataType="viewModel:SumaViewModel"
+             Title="SumaView">
+    <ScrollView >
+        <VerticalStackLayout Padding="40,30"
+                             Background="#f6f6f6"
+                             Spacing="5">
+            <Label Text="Ingrese el Valor de A"/>
+            <Entry Text="{Binding A}" Placeholder="Ingrese un valor" Keyboard="Numeric"/>
+            <Label Text="Ingrese el Valor de A" Margin="0, 20, 0, 0"/>
+            <Entry Text="{Binding B}" Placeholder="Ingrese un valor" Keyboard="Numeric"/>
+            <Label Text="Resultado" Margin="0, 20, 0, 0"/>
+            <Entry Text="{Binding Resultado}" Placeholder="Ingrese un valor" Keyboard="Numeric" IsReadOnly="True"/>
+
+            <Button Text="Calcular" Command="{Binding calcularCommand}" Background="CadetBlue"/>
+            <Button Text="Limpiar" Command="{Binding LimpiarCommand}" Background="OrangeRed"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
